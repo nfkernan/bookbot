@@ -19,7 +19,15 @@ def dict():
                 letters_count[l] += 1
             else:
                 letters_count[l] = 1
-    print(letters_count)
+    list_of_dicts = [{key: value} for key, value in letters_count.items()]
+    
+    sorted_list = sorted(list_of_dicts, key=lambda x: list(x.values())[0], reverse=True)
+    for d in sorted_list:
+        key = next(iter(d))
+        value = d[key]
+        print(f"The '{key}' character was found {value} times.")
+
+
 
 main()
 dict()
