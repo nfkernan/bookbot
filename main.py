@@ -6,7 +6,7 @@ def main():
     words = file_contents.split()
     for word in words:
         number = number + 1
-    print(f"This book contains {number} words.")
+    print(f"This document contains {number} words.")
 
 def dict():
     with open("books/frankenstein.txt") as f:
